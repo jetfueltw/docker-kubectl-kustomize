@@ -5,8 +5,8 @@ ENV KUSTOMIZE_VERSION=4.5.7
 
 WORKDIR /usr/local/bin
 
-# Install bash, git, curl
-RUN apk add --no-cache ca-certificates bash git curl
+# Install bash, git, curl, openssh-client
+RUN apk add --no-cache ca-certificates bash git curl openssh-client
 
 # Install kubectl
 RUN curl -sLO https://storage.googleapis.com/kubernetes-release/release/v$KUBECTL_VERSION/bin/linux/amd64/kubectl && \
